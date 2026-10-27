@@ -8,6 +8,7 @@ class Data(BaseModel):
     """
     name: str = Field(
         description="The name from the request, echoed exactly as sent",
+        pattern=r'^[a-zA-Z]+$',
         frozen=True,
     )
     age: Optional[int] = Field(
